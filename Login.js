@@ -1,12 +1,12 @@
 /** Add the login functionality */
-export const login = async (email, password) => {
+export const login = async (email, pwd) => {
   try {
-    const response = await fetch('http://localhost:3000/login', {
+    const response = await fetch('http://localhost:3100/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, pwd }),
     });
     const data = await response.json();
     return data;
@@ -16,14 +16,14 @@ export const login = async (email, password) => {
 };
 
 /** Add Signup Exceptions */
-export const signup = async (email, password) => {
+export const signup = async (email, pwd) => {
   try {
-    const response = await fetch('http://localhost:3000/signup', {
+    const response = await fetch('http://localhost:3100/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, pwd }),
     });
     const data = await response.json();
     return data;
