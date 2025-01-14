@@ -31,3 +31,19 @@ export const signup = async (email, password) => {
     console.error('Error signing up:', error);
   }
 };
+
+/** Add the Get User Functionality */
+export const getUser = async (token, userId) => {
+  try {
+    const response = await fetch(`https://reqres.in/api/users/${userId}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error getting user:', error);
+  }
+};
