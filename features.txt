@@ -1,0 +1,16 @@
+Add Features
+Add New Features
+Add New Features
+Add New Features
+Remove Features
+
+1. Take a pull from the remote branch using git pull origin <branchname>
+2. Take a pull from the originated branch (from where you created your branch)
+
+main --> Prod
+    uat --> UAT
+    sit --> SIT
+    development --> Devloper Org
+        feature/signin
+        feature/signup
+        bugfix/payment-process
