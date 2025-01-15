@@ -1,0 +1,13 @@
+VIM Editors Key Commands:
+
+i - insert before cursor
+a - insert after cursor
+o - insert new line below
+O - insert new line above
+ESC - exit insert mode
+:wq - save and quit
+
+Example message:
+Revert "feature X" due to performance issues
+- Reverting commit abc123
+- Will implement alternative solution

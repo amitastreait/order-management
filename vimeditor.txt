@@ -1,0 +1,19 @@
+Remember:
+1. To Save and Quit:
+    1. Press ESC (to ensure you're in command mode)
+    2. Type :wq
+    3. Press ENTER
+
+2. Quit without saving
+    1. Press ESC
+    2. Type :q!
+    3. Press ENTER
+
+3. If you made changes and want to save and quit (alternative method):
+    1. Press ESC
+    2. Type ZZ (capital ZZ)
+
+4. If you haven't made any changes and want to quit:
+    1. Press ESC
+    2. Type :q
+    3. Press ENTER
