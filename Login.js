@@ -1,12 +1,12 @@
 /** Add the login functionality */
-export const login = async (email, password, securty_question) => {
+export const login = async (email, pwd) => {
   try {
-    const response = await fetch('https://reqres.in/api/login', {
-      method: 'GET',
+    const response = await fetch('http://localhost:3100/login', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password, securty_question}),
+      body: JSON.stringify({ email, pwd }),
     });
     const data = await response.json();
     return data;
@@ -18,7 +18,7 @@ export const login = async (email, password, securty_question) => {
 /** Add Signup Exceptions */
 export const signup = async (email, pwd) => {
   try {
-    const response = await fetch('https://reqres.in/api/register', {
+    const response = await fetch('http://localhost:3100/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
