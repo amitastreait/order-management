@@ -1,6 +1,6 @@
 # Order Management
 
-# Color LS CLONED FROM - https://github.com/athityakumar/colorls/blob/main/README.md
+# CLONED FROM - https://github.com/athityakumar/colorls/blob/main/README.md
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
