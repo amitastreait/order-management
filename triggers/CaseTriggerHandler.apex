@@ -7,7 +7,11 @@
 **/
 public with sharing class CaseTriggerHandler{
     public void onAfterInsert(List<Case> newCases){
-        // Do something
+        /** 1 */
+        /** Iterate over cases and upadte description */
+        for(Case c : newCases){
+            c.Description = 'This is a new case';
+        }
     }
     public void onAfterUpdate(List<Case> newCases, Map<Id, Case> oldMap){
         // Do something
