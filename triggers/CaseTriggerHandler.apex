@@ -14,7 +14,17 @@ public with sharing class CaseTriggerHandler{
         }
     }
     public void onAfterUpdate(List<Case> newCases, Map<Id, Case> oldMap){
-        // Do something
+        /*2*/
+        /** Go with the cases, check if the status is changed create a task for the case */
+        List<Task> tasks = new List<Task>();
+        for(Case c : newCases){
+            if(c.Status != oldMap.get(c.Id).Status){
+                Task t = new Task();
+                t.Subject = 'Case status changed';
+                t.WhatId = c.Id;
+                tasks.add(t);
+            }
+        }
     }
     public void onAfterDelete(List<Case> oldCases){
         // Do something
