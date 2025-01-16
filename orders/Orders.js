@@ -40,3 +40,35 @@ Meteor.methods({
         return Orders.insert(order);
     }
 });
+
+/** Add the Return Order Functionality */
+Meteor.methods({
+    /**
+     * Return order
+     *
+     * @param {String} orderId - Order ID
+     * @return {Boolean} Return status
+     */
+    'order.return': function (orderId) {
+        // Check if user is logged in
+        if (!this.userId) {
+            throw new Meteor.Error('error-not-logged-in', 'You are not logged in');
+        }
+
+        // Check if user is admin
+        if (!Roles.userIsInRole(this.userId, 'admin')) {
+            throw new Meteor.Error('error-not-authorized', 'You are not authorized to return order');
+        }
+
+        // Check order
+        const order = Orders.findOne(orderId);
+        if (!order) {
+            throw new Meteor.Error('error-invalid-order', 'Invalid order');
+        }
+
+        // Update order status
+        Orders.update(orderId, { $set: { status: 'returned' } });
+
+        return true;
+    }
+});
