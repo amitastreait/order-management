@@ -14,3 +14,10 @@ main --> Prod
         feature/signin
         feature/signup
         bugfix/payment-process
+main --> Prod
+    uat --> UAT
+    sit --> SIT
+    development --> Devloper Org
+        feature/signin
+        feature/signup
+        bugfix/payment-process
